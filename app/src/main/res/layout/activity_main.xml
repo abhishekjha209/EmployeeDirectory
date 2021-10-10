@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_slider"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_options"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="45dp"
+        android:layout_toRightOf="@id/iv_slider"
+        android:gravity="center"
+        android:text="Employee Directory"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_slider"
+        android:layout_marginTop="10dp"
+        android:clipToPadding="false"
+        android:padding="4dp"
+        tools:listitem="@layout/item_view" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingAddButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignRight="@id/recycler_view"
+        android:layout_alignBottom="@id/recycler_view"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_add" />
+
+
+</RelativeLayout>
